@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Nature-inspired color palette
+				nature: {
+					leaf: '#4CAF50',
+					sky: '#03A9F4',
+					earth: '#795548',
+					gold: '#FFD700',
+					sunset: '#FF5722'
+				},
+				// Fractal-inspired colors
+				fractal: {
+					deep: '#1A237E',
+					mid: '#303F9F',
+					light: '#7986CB'
 				}
 			},
 			borderRadius: {
@@ -70,25 +85,50 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'flow': {
+					'0%, 100%': { 
+						backgroundPosition: '0% 50%',
+						transform: 'scale(1.0)'
 					},
-					to: {
-						height: '0'
+					'50%': { 
+						backgroundPosition: '100% 50%',
+						transform: 'scale(1.02)' 
 					}
+				},
+				'breathe': {
+					'0%, 100%': { transform: 'scale(1.0)' },
+					'50%': { transform: 'scale(1.03)' }
+				},
+				'golden-spin': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				},
+				'path-animation': {
+					'0%': { strokeDashoffset: '1000' },
+					'100%': { strokeDashoffset: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'flow': 'flow 15s ease infinite',
+				'breathe': 'breathe 4s ease-in-out infinite',
+				'golden-spin': 'golden-spin 10s linear infinite',
+				'path-draw': 'path-animation 2s ease-in-out forwards'
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-golden': 'linear-gradient(45deg, #FFD700, #FFC107, #FF9800, #FF5722)',
+				'gradient-earth': 'linear-gradient(180deg, #4CAF50 0%, #8BC34A 35%, #CDDC39 100%)',
+				'gradient-cosmos': 'linear-gradient(135deg, #1A237E 0%, #303F9F 40%, #7986CB 90%)',
+				'gradient-fractal': 'linear-gradient(108deg, rgba(242,245,139,1) 17.7%, rgba(148,197,20,0.68) 91.2%)'
 			}
 		}
 	},
