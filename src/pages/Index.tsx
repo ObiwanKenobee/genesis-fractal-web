@@ -127,7 +127,7 @@ const Index = () => {
           id="foundations"
           title="1. Foundations: Rock-Solid Core"
           subtitle="Building on the solid foundation of modern web technologies"
-          quote="\"Built on the rock\" — Matthew 7:24"
+          quote="'Built on the rock' — Matthew 7:24"
           items={foundationItems}
           gradientClass="bg-gradient-earth"
         />
